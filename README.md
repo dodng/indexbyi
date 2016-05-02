@@ -2,16 +2,16 @@ __Indexbyi a http server which providing full-text search__
 
 It is a tiny but complete full-text search http server (include make index,search engine,http server)
 
-##0.What is used to do 
+##0.What to do 
 
-a:use it quick and convenient to build a http server (which Only belong to you ) 
+a:Quick and convenient to build a http server (which Only belong to you ) 
 
-b:it help you to understand the components of a full-text which need(like www.google.com)
+b:Help you to understand the required modules of a full-text search system (like www.google.com)
 Small as the sparrow is, it possesses all its internal organs -- small but complete
 
 ##1 Technical Architecture
 
-![major model architecture](https://github.com/dodng/indexbyi/blob/master/doc/indexbyi.png)
+![major modules architecture](https://github.com/dodng/indexbyi/blob/master/doc/indexbyi.png)
 
 ##2 code Architecture
 
