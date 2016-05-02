@@ -11,7 +11,7 @@ Small as the sparrow is, it possesses all its internal organs -- small but compl
 
 ##1 Technical Architecture
 
-![architecture](https://github.com/dodng/indexbyi/tree/master/doc/indexbyi.png)
+![major model architecture](https://github.com/dodng/indexbyi/tree/master/doc/indexbyi.png)
 
 ##2 code Architecture
 
