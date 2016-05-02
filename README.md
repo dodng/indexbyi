@@ -53,3 +53,11 @@ b:use linux bash to start make_index.sh to gen index files
 c:move index files to the right path(core.py have the path)
 
 d:start the ui.py(You have to install tornado first)
+
+-----------------------------------------------------------
+
+author email:dodng12@163.com
+
+welcome to any problems.
+
+If it can help you,I will be very happy.
