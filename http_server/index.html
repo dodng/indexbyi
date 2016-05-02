@@ -1,0 +1,64 @@
+<html>
+<head>
+<script type="text/javascript">
+
+var xmlHttp=null;
+
+function searchquery()
+{
+  str=document.getElementById("field1").value;
+  startid_str=document.getElementById("field2").value;
+if (str.length==0)
+  { 
+//  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (startid_str.length==0)
+  { 
+  startid_str="0";
+  }
+try
+  {// Firefox, Opera 8.0+, Safari, IE7
+  xmlHttp=new XMLHttpRequest();
+  }
+catch(e)
+  {// Old IE
+  try
+    {
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  catch(e)
+    {
+    alert ("Your browser does not support XMLHTTP!");
+    return;  
+    }
+  }
+var url="/s?query=" + str;
+url=url+"&startid=" + startid_str;
+xmlHttp.open("GET",url,false);
+xmlHttp.send(null);
+var json_ct = eval("("+xmlHttp.responseText+")"); 
+document.getElementById("txtHint").innerHTML="sum:"+json_ct["content_sum"];
+document.getElementById("txtHint").innerHTML+="  num:"+json_ct["content_num"]+"<br><br><br>";
+
+for (var i=0;i<json_ct["content_num"];i++)
+{
+document.getElementById("txtHint").innerHTML+="["+i+"]:"+json_ct["content"][i][0]+"<br>";
+document.getElementById("txtHint").innerHTML+=json_ct["content"][i][1]+"<br>";
+document.getElementById("txtHint").innerHTML+="<a href=\""+json_ct["content"][i][2]+"\">"+json_ct["content"][i][2]+"</a><br>";
+document.getElementById("txtHint").innerHTML+=json_ct["content"][i][3]+"<br>";
+document.getElementById("txtHint").innerHTML+="<br><br>";
+}
+}
+</script> 
+</head>
+<body>
+Query:   <input type="text" id="field1"><br>
+Startid: <input type="text" id="field2"><br>
+
+<button onclick="searchquery()">search</button>
+
+<form><p>Results: <span id="txtHint"></span></p></form>
+</body>
+</html>
+
