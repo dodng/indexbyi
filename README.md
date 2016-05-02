@@ -14,20 +14,31 @@ Small as the sparrow is, it possesses all its internal organs -- small but compl
 ##2 code Architecture
 
 make_index
+
 	|_url.seed (url list which will be added into index)
+	
 	|_url.seed.here(url list which already being added into index)
+	
 	|_make_index.sh(make_index contronl shell bash)
+	
 	|_parse_html.py(use python third lib beautifulsoup to change html to text content)
+	
 	|_seg_word.py(use python third lib jieba to cut a text to many words)
+	
 	|_merge_index.py(merge already exist index and the just generated to the index)
+	
 	|_dump_brief.py(dump the url breif to display info)
 	
 search_engine
+
 	|_core.py(use the index file and search policy to provide full-text search funtion)
+	
 	|_test.py(a example to just use the search_engine to test)
 	
 http_server
+
 	|_index.html(Front-end use AJAX to get json from ui.py and display info)
+	
 	|_ui.py(use python third lib tornado to provide http server (include search_engine))
 	
 	
