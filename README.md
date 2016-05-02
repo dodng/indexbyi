@@ -9,7 +9,7 @@ a:Quick and convenient to build a http server (which Only belong to you )
 b:Help you to understand the required modules of a full-text search system (like www.google.com)
 Small as the sparrow is, it possesses all its internal organs -- small but complete
 
-c:an exmple:http://www.indexbyi.com:8199/
+c:An exmple:http://www.indexbyi.com:8199/
 
 ![an exmple](https://github.com/dodng/indexbyi/blob/master/doc/indexbyi_example1.png)
 
